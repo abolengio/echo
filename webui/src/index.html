@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web audio: Filter Playground</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+<!--    <link href="css/ui-lightness/jquery-ui-1.9.1.custom.css" rel="stylesheet"/> -->
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="pagination-centered">Web audio: Filter Playground</h1>
+
+    <ul class="nav nav-list">
+        <li class="divider"></li>
+    </ul>
+
+    <div class="row" style="background-color: #eeeeee">
+
+        <div class="span3">
+            <h3>1. Enable inputs:</h3>
+
+            <div class="row">
+                <div class="span1"><span>Music:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="music-start" href="#"><i id="music-start-icon"
+                                                                                    class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="music-stop" href="#"><i id="music-stop-icon"
+                                                                                  class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1"><span>Microphone:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="mic-start" href="#"><i id="mic-start-icon"
+                                                                                  class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="mic-stop" href="#"><i id="mic-stop-icon"
+                                                                                class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1"><span>Play Record:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="sq-start" href="#"><i id="sq-start-icon"
+                                                                                 class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="sq-stop" href="#"><i id="sq-stop-icon"
+                                                                               class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="span3">
+            <h3>3. Enable outputs</h3>
+            <div class="row">
+                <div class="span1"><span>Speaker:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="spk-start" href="#"><i id="spk-start-icon"
+                                                                                   class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="spk-stop" href="#"><i id="spk-stop-icon"
+                                                                                 class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span1"><span>Frequencies:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="freq-start" href="#"><i id="freq-start-icon"
+                                                                                   class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="freq-stop" href="#"><i id="freq-stop-icon"
+                                                                                           class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span1"><span>Spectrogram:</span></div>
+                <div class="span2">
+                    <div class="btn-toolbar" style="margin-top: -7px; margin-left: 10px">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" id="spectro-start" href="#"><i id="spectro-start-icon"
+                                                                                      class="icon-play icon-white"></i></a>
+                            <a class="btn btn-primary disabled" id="spectro-stop" href="#"><i id="spectro-stop-icon"
+                                                                                    class="icon-stop icon-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ul class="nav nav-list">
+        <li class="divider"></li>
+    </ul>
+
+    <div class="row" style="background-color: #eeeeee; padding-top: 10px; padding-bottom: 10px">
+        <div class="row">
+            <div class="span12"><h3 style="margin-left: 20px">4. View the output:</h3></div>
+        </div>
+        <div class="row">
+            <div class="span4 " >
+                Frequencies:
+                <canvas id="spectrum" width="300" height="256"
+                style="display: block; background-color: black ;"></canvas>
+            </div>
+            <div class="span4 ">
+                Spectrogram:
+                <canvas id="spectrogram" width="300" height="256"
+                        style="display: block; background-color: black ;"></canvas>
+            </div>
+
+        </div>
+    </div>
+
+    <ul class="nav nav-list">
+        <li class="divider"></li>
+    </ul>
+</div>
+
+<script src="js/jquery-1.8.2.js"></script>
+<!-- <script src="js/jquery-ui-1.9.1.custom.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/chroma.js"></script>
+<script src="js/recorderjs/recorder.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
